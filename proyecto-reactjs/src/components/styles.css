@@ -1,0 +1,12 @@
+.tittleP {
+    text-align: center;
+    margin-top: 30px;
+    text-decoration: underline;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}

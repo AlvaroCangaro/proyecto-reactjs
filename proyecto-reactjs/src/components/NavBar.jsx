@@ -1,4 +1,5 @@
 import React from "react";
+import CartWidget from "./CartWidget";
 
 
 export default function NavBar() {
@@ -28,6 +29,9 @@ export default function NavBar() {
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#">Auriculares</a>
+                            </li>
+                            <li className="nav-item">
+                                <CartWidget />
                             </li>
                         </ul>
                         <form className="d-flex">
