@@ -1,12 +1,22 @@
-import React from "react";
-import ItemCount from "./ItemCount";
+import React, { useEffect, useState } from "react";
+import customFetch from "./customFetch";
 import './styles.css'
+import productos from "./productos";
+import ItemList from "./ItemList";
 
 export default function ItemListContainer({ celular, funda, cargador, auricular}) {
     
-    function onAdd(counter){
-        alert("Se agregaron " + counter + " productos")
-    }
+    const [items, setItems] = useState ([]);
+
+    useEffect(() => {
+        customFetch(2000, productos)
+        .then(resultado => setItems(resultado))
+        .catch(error => console.log(error));
+    }, [items])
+
+    // function onAdd(counter){
+    //     alert("Se agregaron " + counter + " productos")
+    // }
     
     return (
         
@@ -18,7 +28,10 @@ export default function ItemListContainer({ celular, funda, cargador, auricular}
             <li>{cargador}</li>
             <li>{auricular}</li>
         </ul>
-        <ItemCount initial = {0} stock = {11} onAdd = {onAdd}/>
+        
+        <div className="itemsP">
+            <ItemList productos={items} />
+        </div>
         </>
     )
 }
