@@ -29,3 +29,11 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+.itemDetail {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 25%;
+    margin-left: 25%;
+}
