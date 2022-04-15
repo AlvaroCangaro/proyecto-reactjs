@@ -1,15 +1,17 @@
 import React from 'react';
 import ItemCount from './ItemCount';
 import './styles.css';
+import productos from './productos'
 
 
-const ItemDetail = ({ producto }) => {
+const ItemDetail = () => {
 
     function onAdd(counter){
         alert("Se agregaron " + counter + " productos")
     }
     
-    return (
+    
+    return productos.map ((producto) =>(
         <>
             <div className='itemDetail'>
                 <img src={producto.imagen} alt={producto.nombre} />
@@ -21,7 +23,7 @@ const ItemDetail = ({ producto }) => {
                 </div>
             </div>
         </>
-    );
+    ));
 };
 
 export default ItemDetail;

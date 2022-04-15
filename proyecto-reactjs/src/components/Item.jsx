@@ -1,6 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Card from 'react-bootstrap/Card'
 import ItemCount from "./ItemCount"
+
 
 function Item({ id, nombre, precio, imagen }) {
     function onAdd(counter){
@@ -18,6 +20,7 @@ function Item({ id, nombre, precio, imagen }) {
                             $ {precio}
                         </Card.Text>
                         <ItemCount initial = {0} stock = {11} onAdd = {onAdd}/>
+                        <Link to={`/item/${id}`}>Ver detalle</Link>
                     </Card.Body>
                 </Card>
             </div>
