@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import customFetch from "./customFetch";
 import './styles.css'
 import { useParams } from "react-router-dom";
-import productos from "./productos";
 import ItemList from "./ItemList";
+import { PromiseProductos } from "./PromiseProductos";
 
-export default function ItemListContainer({ celular, funda, cargador, auricular}) {
+export default function ItemListContainer({}) {
     
     const [items, setItems] = useState ([]);
 
@@ -14,24 +13,24 @@ export default function ItemListContainer({ celular, funda, cargador, auricular}
     console.log (categoryId);
 
     useEffect(() => {
-        customFetch(500, productos, 'C', categoryId)
+        PromiseProductos(categoryId)
         .then(resultado => setItems(resultado))
         .catch(error => console.log(error));
-    }, [items, categoryId])
+    }, [categoryId])
     
     return (
         
         <>
-        <h2 className="tittleP">Productos en stock</h2>
+        {/* <h2 className="tittleP">Productos en stock</h2>
         <ul className="list">
             <li>{celular}</li>
             <li>{funda}</li>
             <li>{cargador}</li>
             <li>{auricular}</li>
-        </ul>
-        
+        </ul> */}
+        <h2 className="tittleP">Productos en stock</h2>
         <div className="itemsP">
-            <ItemList productos={items} />
+            <ItemList producto={items} />
         </div>
         </>
     )

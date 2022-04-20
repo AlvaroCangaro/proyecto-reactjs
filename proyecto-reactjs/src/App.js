@@ -13,8 +13,8 @@ export default function App() {
         <NavBar />
         <Routes>
           
-          <Route path='/' element={<ItemListContainer celular={"Iphone 13 Pro Max"} funda={"Funda Silicone Iphone 13 Pro Max"} cargador={"MagSafe 20W"} auricular={"Airpods Pro"} />}/>
-          <Route path='/category/:categoryId' element={<ItemListContainer celular={"Iphone 13 Pro Max"} funda={"Funda Silicone Iphone 13 Pro Max"} cargador={"MagSafe 20W"} auricular={"Airpods Pro"} />} />
+          <Route path='/' element={<ItemListContainer />}/>
+          <Route path='/category/:categoryId' element={<ItemListContainer />} />
           <Route path='/item/:id' element={<ItemDetailContainer />}/>
 
         </Routes>

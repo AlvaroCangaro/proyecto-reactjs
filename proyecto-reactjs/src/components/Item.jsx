@@ -4,23 +4,21 @@ import Card from 'react-bootstrap/Card'
 import ItemCount from "./ItemCount"
 
 
-function Item({ id, nombre, precio, imagen }) {
-    function onAdd(counter){
-        alert("Se agregaron " + counter + " productos")
-    }
+function Item({ prod }) {
+    
 
     return (
         <>
             <div>
-                <Card key={id} style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={imagen} />
+                <Card key={prod.id} style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src={prod.imagen} />
                     <Card.Body>
-                        <Card.Title>{nombre}</Card.Title>
+                        <Card.Title>{prod.nombre}</Card.Title>
                         <Card.Text>
-                            $ {precio}
+                            $ {prod.precio}
                         </Card.Text>
-                        <ItemCount initial = {0} stock = {11} onAdd = {onAdd}/>
-                        <Link to={`/item/${id}`}>Ver detalle</Link>
+                        <ItemCount initial = {0} stock = {11} />
+                        <Link to={`/item/${prod.id}`}>Ver detalle</Link>
                     </Card.Body>
                 </Card>
             </div>

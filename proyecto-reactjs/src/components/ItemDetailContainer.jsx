@@ -1,31 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
-import productos from './productos';
+import { getItem } from './getItem';
 
 
-const ItemDetailContainer = () => {
+export default function ItemDetailContainer () {
 
     const [producto, setProducto] = useState({});
 
-    const {id} = useParams()
+    const { id } = useParams()
 
-    useEffect(()=>{
-        const getItem = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(productos, id);
+    useEffect(() => {
+        getItem(id)
+            .then((res) => {
+                setProducto(res);
+            })
+            .catch((error) => {
+                console.log(error);
             });
-        }, 1000);
-
-        getItem.then((res) => setProducto(res));
-        getItem.catch((err) => console.log(err));
     }, [id]);
 
     return (
         <>
-        <ItemDetail producto={producto} />
+            <ItemDetail producto={producto} />
         </>
     );
 }
 
-export default ItemDetailContainer

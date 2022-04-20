@@ -1,4 +1,4 @@
-const productos = [
+export const productos = [
     {
         id: 1,
         nombre: 'Iphone 13 Pro Max',
@@ -34,11 +34,3 @@ const productos = [
     },
 ]
 
-export const traerProducto = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-        }, 1000);
-    })
-}
-
-export default productos;

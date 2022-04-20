@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-const ItemCount = ({ initial, stock, onAdd }) => {
 
-    const [counter, setCounter] = useState(initial);
+export default function ItemCount ({ stock, onAdd }) {
+
+    const [counter, setCounter] = useState(0);
 
     const Increase = () => {
         if (counter < stock) {
@@ -10,13 +11,19 @@ const ItemCount = ({ initial, stock, onAdd }) => {
         }
     };
     const Decrease = () => {
-        if (counter > initial) {
+        if (counter > 0) {
             setCounter(counter - 1)
         }
     }
+
+    function handleClick() {
+        onAdd(counter)
+    }
+
     const Reset = () => {
         setCounter(1);
     }
+
     return (
         <>
             <div className="counter">
@@ -24,12 +31,10 @@ const ItemCount = ({ initial, stock, onAdd }) => {
                 <span className="counter_">{counter}</span>
                 <Button className="Incremento buttonC" onClick={Increase} variant="success">+</Button>
                 <div>
-                    <Button className="Agregar buttonC" onClick={() => onAdd(counter)} variant="succes">Agregar al carro</Button>
+                    <Button className="Agregar buttonC" onClick={handleClick} variant="succes">Agregar al carro</Button>
                     <Button className="Reset buttonC" onClick={Reset}>Reset</Button>
                 </div>
             </div>
         </>
     )
 }
-
-export default ItemCount;

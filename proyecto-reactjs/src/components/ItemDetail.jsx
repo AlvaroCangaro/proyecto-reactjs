@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ItemCount from './ItemCount';
 import './styles.css';
-import productos from './productos'
+import { Link } from 'react-router-dom';
 
 
-const ItemDetail = () => {
+export default function ItemDetail ({ producto }) {
 
-    function onAdd(counter){
-        alert("Se agregaron " + counter + " productos")
+    const [number, setNumber]=useState(0);
+    
+    // function onAdd(counter){
+    //     alert("Se agregaron " + counter + " productos")
+    // }
+
+    function onAdd (counter) {
+        setNumber(counter);
     }
     
     
-    return productos.map ((producto) =>(
+    return (
         <>
             <div className='itemDetail'>
                 <img src={producto.imagen} alt={producto.nombre} />
@@ -19,11 +25,9 @@ const ItemDetail = () => {
                     <h2>{producto.nombre}</h2>
                     <h3>{producto.precio}</h3>
                     <p>{producto.descripcion}</p>
-                    <ItemCount initial = {0} stock = {11} onAdd = {onAdd}/>
+                    {  number===0 ? <ItemCount stock={11} onAdd={onAdd} />: <Link to='/Cart' className='botonDetalle'>Ir al carrito</Link> }
                 </div>
             </div>
         </>
-    ));
+    );
 };
-
-export default ItemDetail;
