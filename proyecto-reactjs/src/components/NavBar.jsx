@@ -31,9 +31,9 @@ export default function NavBar() {
                             <Link to='/category/auriculares' className="nav-item nav-link">
                                 Auriculares
                             </Link>
-                            <Link to='/category/carro' className="nav-item">
+                            <li className="nav-item">
                                 <CartWidget />
-                            </Link>
+                            </li>
                         </ul>
                         <form className="d-flex">
                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />

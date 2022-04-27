@@ -14,6 +14,7 @@ export default function ItemDetail ({ producto }) {
 
     function onAdd (counter) {
         setNumber(counter);
+        console.log(counter);
     }
     
     
@@ -23,7 +24,8 @@ export default function ItemDetail ({ producto }) {
                 <img src={producto.imagen} alt={producto.nombre} />
                 <div>
                     <h2>{producto.nombre}</h2>
-                    <h3>{producto.precio}</h3>
+                    <h3>$ {producto.precio}</h3>
+                    <p>{producto.categoria}</p>
                     <p>{producto.descripcion}</p>
                     {  number===0 ? <ItemCount stock={11} onAdd={onAdd} producto={producto} />: <Link to='/Cart' className='botonDetalle'>Ir al carrito</Link> }
                 </div>

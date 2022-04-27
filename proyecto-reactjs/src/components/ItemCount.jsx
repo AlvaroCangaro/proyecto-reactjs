@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import { Cartcontext } from './CartContext';
+import { CartContext } from './CartContext';
 import { useContext } from 'react';
 
 export default function ItemCount ({ stock, onAdd, producto }) {
 
     const [counter, setCounter] = useState(0);
 
-    const {addItem}= useContext(Cartcontext);
+    const {addItem}= useContext(CartContext);
 
     const Increase = () => {
         if (counter < stock) {
