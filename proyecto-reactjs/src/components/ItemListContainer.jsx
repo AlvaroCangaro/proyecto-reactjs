@@ -2,36 +2,40 @@ import React, { useEffect, useState } from "react";
 import './styles.css'
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
-import { PromiseProductos } from "./PromiseProductos";
+// import { PromiseProductos } from "./PromiseProductos";
+import { collection, getDocs, getFirestore, where, query } from "firebase/firestore";
 
-export default function ItemListContainer({}) {
-    
-    const [items, setItems] = useState ([]);
+export default function ItemListContainer({ }) {
+
+    const [items, setItems] = useState([]);
 
     const { categoryId } = useParams();
 
-    console.log (categoryId);
 
     useEffect(() => {
-        PromiseProductos(categoryId)
-        .then(resultado => setItems(resultado))
-        .catch(error => console.log(error));
-    }, [categoryId])
-    
-    return (
+
+        const db = getFirestore()
         
+        let productosRef;
+        if (!categoryId) {
+            productosRef = collection(db, 'productos');
+        } else {
+            productosRef = query(collection(db, 'productos'), where('category', '==', categoryId));
+        }
+
+        getDocs(productosRef).then((res) => {
+            setItems(res.docs.map((p) => ({ id: p.id, ...p.data() })));
+        })
+
+    }, [categoryId])
+
+    return (
+
         <>
-        {/* <h2 className="tittleP">Productos en stock</h2>
-        <ul className="list">
-            <li>{celular}</li>
-            <li>{funda}</li>
-            <li>{cargador}</li>
-            <li>{auricular}</li>
-        </ul> */}
-        <h2 className="tittleP">Productos en stock</h2>
-        <div className="itemsP">
-            <ItemList producto={items} />
-        </div>
+            <h2 className="tittleP">Productos en stock</h2>
+            <div className="itemsP">
+                <ItemList producto={items} />
+            </div>
         </>
     )
 }
