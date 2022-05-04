@@ -80,7 +80,7 @@ export default function Cart() {
                                     <div className="summary">
                                         <h3>Resumen</h3>
                                         <div className="summary-item"><span className="text">Total</span><span className="price">$ {total.reduce((prev, next) => (+prev) + (+next))}</span></div>
-                                        <Button onClick={clear} type="button" className="btn btn-primary btn-lg btn-block">Pagar</Button>
+                                        <Button as={Link} to='/checkOut' variant="outline-success" /*onClick={() => buyAll()}*/>Pagar</Button>
                                         <div>
                                             <Link to="/" className="btn btn-primary btn-lg btn-block">Seguir Comprando</Link>
                                         </div>
