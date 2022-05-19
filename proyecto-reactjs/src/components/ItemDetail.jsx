@@ -21,13 +21,13 @@ export default function ItemDetail ({ producto }) {
     return (
         <>
             <div className='itemDetail'>
-                <img src={producto.imagen} alt={producto.nombre} />
+                <img className='imgD' src={producto.imagen} alt={producto.nombre} />
                 <div>
                     <h2>{producto.nombre}</h2>
-                    <h3>$ {producto.precio}</h3>
                     <p>{producto.categoria}</p>
                     <p>{producto.descripcion}</p>
-                    {  number===0 ? <ItemCount stock={11} onAdd={onAdd} producto={producto} />: <Link to='/Cart' className='botonDetalle'>Ir al carrito</Link> }
+                    <h3>${producto.precio}</h3>
+                    {  number===0 ? <ItemCount stock={70} onAdd={onAdd} producto={producto} />: <Link to='/Cart' className='botonDetalle btn btn-primary btn-lg btn-block'>Ir al carrito</Link> }
                 </div>
             </div>
         </>

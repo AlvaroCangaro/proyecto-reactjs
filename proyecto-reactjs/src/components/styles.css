@@ -1,7 +1,6 @@
 .tittleP {
     text-align: center;
     margin-top: 30px;
-    text-decoration: underline;
 }
 
 .list {
@@ -16,12 +15,21 @@
     color: white;
 }
 
+.logoNavbar{
+    height: 57px;
+}
+
 .buttonC {
     margin-right: 5px;
 }
 
-.counter {
-    text-align: center;
+.buttonC1 {
+    margin-left: 5px;
+}
+
+.buttonC2 {
+    margin-right: 5px;
+    margin-top: 10px;
 }
 
 .itemsP {
@@ -33,8 +41,58 @@
 
 .itemDetail {
     display: flex;
-    margin-top: 50px;
+    margin-top: 5%;
     margin-bottom: 50px;
     margin-right: 25%;
     margin-left: 25%;
+}
+
+.btnP {
+    width: 100%;
+}
+
+.cardP {
+    border-color: #212529;
+    border-radius: 25px;
+    border: solid;
+}
+
+.card-img-top {
+    border-radius: inherit;
+}
+
+.formC {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    border-color: #212529;
+    border: solid;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 2%;
+}
+
+.btnCheck {
+    margin-left: 45%;
+}
+
+.textC {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid;
+    border-color: #212529;
+    margin-left: 31%;
+    margin-right: 31%;
+}
+
+.textC2 {
+    text-align: center;
+}
+
+.imgD {
+    width: 45%;
+    margin-bottom: 5%;
 }

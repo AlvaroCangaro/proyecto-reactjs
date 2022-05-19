@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
+import { Button } from "react-bootstrap";
 
 
 export default function NavBar() {
@@ -14,7 +15,7 @@ export default function NavBar() {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        <Link className="navbar-brand" to='/'>Apple Arg</Link>
+                        <Link className="navbar-brand" to='/'><img src="img/apple.png" className="logoNavbar" alt="apple-arg" /></Link>
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <Link to='/' className="nav-item nav-link active">
                                 Inicio
@@ -36,8 +37,8 @@ export default function NavBar() {
                             </li>
                         </ul>
                         <form className="d-flex">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                                <button className="btn btn-outline-success" type="submit">Search</button>
+                            <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
+                            <Button variant="primary">Buscar</Button>
                         </form>
                     </div>
                 </div>

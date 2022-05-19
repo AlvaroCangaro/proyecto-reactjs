@@ -18,9 +18,9 @@ const CartContextProvider = ({ children }) => {
     };
     console.log(cart);
 
-    const removeItem = (id) => {
-        setCart(cart.filter((producto) => producto.id !== id));
-    };
+    const removeItem = (item) => {
+        setCart(cart.filter((producto) => producto.id !== item.id));
+    }
 
     const clear = () => setCart([]);
 
@@ -28,9 +28,8 @@ const CartContextProvider = ({ children }) => {
         return cart.reduce((total, producto) => total += (producto.cantidad*producto.precio), 0)
     }
 
-    const cantItems = () => {
-        return cart.reduce((total, producto) => total +  producto.cantidad*producto.precio,0)
-    }
+    const cantItems =  cart.reduce((total, producto) => total +  producto.cantidad,0)
+    
 
     let valorTotal = cant();
 

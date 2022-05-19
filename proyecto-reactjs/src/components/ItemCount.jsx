@@ -34,10 +34,10 @@ export default function ItemCount ({ stock, onAdd, producto }) {
             <div className="counter">
                 <Button className="Decremento buttonC" onClick={Decrease} variant="danger">-</Button>
                 <span className="counter_">{counter}</span>
-                <Button className="Incremento buttonC" onClick={Increase} variant="success">+</Button>
+                <Button className="Incremento buttonC1" onClick={Increase} variant="success">+</Button>
                 <div>
-                    <Button className="Agregar buttonC" onClick={handleClick} variant="succes">Agregar al carro</Button>
-                    <Button className="Reset buttonC" onClick={Reset}>Reset</Button>
+                    <Button className="Agregar buttonC2" onClick={handleClick} variant="succes">Agregar al carro</Button>
+                    <Button className="Reset buttonC2" onClick={Reset}>Reset</Button>
                 </div>
             </div>
         </>

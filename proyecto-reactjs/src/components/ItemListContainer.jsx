@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import './styles.css'
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
-// import { PromiseProductos } from "./PromiseProductos";
 import { collection, getDocs, getFirestore, where, query } from "firebase/firestore";
 
 export default function ItemListContainer({ }) {
@@ -32,7 +31,7 @@ export default function ItemListContainer({ }) {
     return (
 
         <>
-            <h2 className="tittleP">Productos en stock</h2>
+            <h2 className="tittleP">Bienvenido a Apple Arg</h2>
             <div className="itemsP">
                 <ItemList producto={items} />
             </div>
