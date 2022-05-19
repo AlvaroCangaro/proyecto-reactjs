@@ -84,7 +84,7 @@ export default function CartCheckout() {
                     <p className='textC2'>
                         Con este id podrás reclamar tu compra en caso de un imprevisto.
                         Pronto nos estaremos comunicando con vos via email o mediante tu numero de celular para coordinar la entrega de tus productos.
-                        Si quieres seguir comprando clickea en el apartado "Home" en la barra de navegación.
+                        Si quieres seguir comprando clickea en el apartado "Inicio" en la barra de navegación.
                     </p>
                 </div>}
         </>

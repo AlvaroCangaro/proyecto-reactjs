@@ -8,13 +8,20 @@ Apple Arg es un ecommerce de productos Apple, realizado para el proyecto final d
 
 ![AppleArgGif](AppleArg.gif)
 
-### Librerías externas
+## Características
 
-Se utilizaron componentes de React Bootstrap.
-Se utilizo React Router Dom para el manejo de rutas y links en el sitio.
-Se utilizaron estilos CSS para el diseño general del sitio.
-Se utilizo React FontAwesome para agregar iconos.
-Se utilizo la base de datos Firebase.
+- Repositorio [https://github.com/AlvaroCangaro/proyecto-reactjs/tree/main/proyecto-reactjs]
+
+Para clonar el proyecto en su repositorio usar el comando: git clone https://github.com/AlvaroCangaro/proyecto-reactjs/tree/main/proyecto-reactjs
+
+### Librerías externas usadas
+
+- Se utilizaron componentes de React Bootstrap.
+- Se utilizo React Router Dom para el manejo de rutas y links en el sitio.
+- Se utilizaron estilos CSS para el diseño general del sitio.
+- Se utilizo React FontAwesome para agregar iconos.
+- Se utilizo la base de datos Firebase.
+
 
 ### Firebase
 
