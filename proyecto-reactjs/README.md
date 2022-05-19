@@ -1,6 +1,6 @@
 # Proyecto Final React JS - Coderhouse
 
-## Apple Arg 
+## Apple Arg - Objetivo
 
 Apple Arg es un ecommerce de productos Apple, realizado para el proyecto final del curso de React JS.
 
