@@ -10,9 +10,11 @@ Apple Arg es un ecommerce de productos Apple, realizado para el proyecto final d
 
 ## Características
 
+En este sitio web se obtienen productos de Firebase, con los cuales podras realizar una compra. Luego cuando el comprador llene el formulario con sus datos, estos se almacenaran en la base de datos de Firebase y se generara un ID el cual le servira al comprador como ticket/comprobante de la compra realizada.
+
 - Repositorio [https://github.com/AlvaroCangaro/proyecto-reactjs/tree/main/proyecto-reactjs]
 
-Para clonar el proyecto en su repositorio usar el comando: git clone https://github.com/AlvaroCangaro/proyecto-reactjs/tree/main/proyecto-reactjs
+Para clonar el proyecto en su repositorio tendras que utilizar el comando: git clone https://github.com/AlvaroCangaro/proyecto-reactjs/tree/main/proyecto-reactjs
 
 ### Librerías externas usadas
 
