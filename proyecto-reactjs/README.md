@@ -1,14 +1,13 @@
-# Getting Started with Create React App
+# Proyecto Final React JS - Coderhouse
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Apple Arg 
 
-## Available Scripts
-
-In the project directory, you can run:
+Apple Arg es un ecommerce de productos Apple, realizado para el proyecto final del curso de React JS.
 
 ## Demo
 
-![](AppleArg.gif)
+![AppleArgGif](AppleArg.gif)
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
